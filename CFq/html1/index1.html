@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="libs/gsap/gsap.min.js" defer></script>
+  <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+  <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+
+
+<link rel="stylesheet" href="css1/main1.css">
+<script src="js/jqure.js"></script>
+<script src="js1/app1.js" defer></script>
+</head>
+<body>
+  <div class="section">
+    <div class="menu-block">
+      <nav class="menu-nav ">
+        <a class ="menu-nav__link" href="index.html">Домой</a>
+        <a class ="menu-nav__link" href="index2.html">Календарь</a>
+        <a class ="menu-nav__link" href="index3.html">Контакты</a>
+        <a class ="menu-nav__link" href="index4.html">Программы</a>
+      </nav>
+      <a href="#" class="menu-btn">
+        <span></span>
+      </a>
+    </div>
+  </div>
+
+
+  <img class="logo" src="img/Work/лого.png" alt="alt">
+  <header class="hero-section">
+  <img  class="hero" src="img/hero-section1.jpg" alt="alt">
+  <div class="container">
+    <div class="main-header">
+      <h2 class="main-tittle">Подбор Мероприятий</h2>
+      <p class="main-tittle__p">Множество мероприятий по внеурочной <br>деятельности</p>
+    </div>
+  </div>
+  </header>
+  <div class="container1">
+<ul class="menu-vipad">
+    <li><a class="list__item" href="#" data-filter="all" data-filter1="all" data-filter2="all" data-filter3="all" data-filter4="all" data-filter6="all" data-cat7="all">Всё</a></li>
+    <li><a class="list__item" href="#" data-filter1="all">Ресурс</a>
+    <ul>
+      <li><input class="list__item__vipad" type="checkbox" id="patriot"name="resource"><label for="patriot"><span data-filter1="patriot">Патриот</span></label></li>
+      <li><input class="list__item__vipad" type="checkbox" id="subbot" name="resource"><label for="subbot"><span data-filter1="subbot">Субботы МШ</span></label></li>
+      <li><input class="list__item__vipad" type="checkbox" id="dom" name="resource"><label for="dom"><span data-filter1="dom">Дом онлайн </span></label></li>
+      <li><input class="list__item__vipad" type="checkbox" id="znan" name="resource"><label for="znan"><span data-filter1="znan">Знание</span></label></li>
+      <li><input class="list__item__vipad" type="checkbox" id="rdch" name="resource"><label for="rdch"><span data-filter1="rdch">РДШ</span></label></li>
+    </ul></li>
+    <li><a class="list__item" href="#" data-filter2="all" >Класс</a>
+      <ul>
+      <li><input class="list__item__vipad" type="checkbox" id="nachal" name="lesson"><label for="nachal"><span data-filter2="nachal">1-4 классы</span></label></li>
+      <li><input class="list__item__vipad" type="checkbox" id="sred" name="lesson"><label for="sred"><span data-filter2="sred">5-9 классы</span></label></li>
+      <li><input class="list__item__vipad" type="checkbox" id="star" name="lesson"><label for="star"><span data-filter2="star"> 10-11 классы</span></label></li>
+      <li><input class="list__item__vipad" type="checkbox" id="vse" name="lesson"><label for="vse"><span data-filter2="vse">1-11 классы </span></label></li>
+    </ul></li>
+    <li><a class="list__item" href="#" data-filter6="all">Рейтинг</a>
+    <ul>
+      <li><input class="list__item__vipad" type="checkbox" id="olimp" name="rat"><label for="olimp"><span data-filter6="olimp">Олимпиады</span></label></li>
+    </ul></li>
+    <li><a class="list__item" href="#" data-filter3="all">Форма</a>
+      <ul>
+        <li><input class="list__item__vipad" type="checkbox" id="tren" name="forms"><label for="tren"><span data-filter3="tren">Трениовка</span></label></li>
+        <li><input class="list__item__vipad" type="checkbox" id="conk" name="forms"><label for="conk"><span data-filter3="conk">Конкурс</span></label></li>
+        <li><input class="list__item__vipad" type="checkbox" id="eksk" name="forms"><label for="eksk"><span data-filter3="eksk">Экскурсии</span></label></li>
+        <li><input class="list__item__vipad" type="checkbox" id="victor" name="forms"><label for="proekt"><span data-filter3="victor">Проект</span></label></li>
+        <li><input class="list__item__vipad" type="checkbox" id="sorev" name="forms"><label for="victor"><span data-filter3="sorev">Викторина</span></label></li>
+        <li><input class="list__item__vipad" type="checkbox" id="master" name="forms"><label for="master"><span data-filter3="master">Мастер-классы</span></label></li>
+        <li><input class="list__item__vipad" type="checkbox" id="akc" name="forms"><label for="akc"><span data-filter3="akc">Акции</span></label></li>
+        <li><input class="list__item__vipad" type="checkbox" id="lekc" name="forms"><label for="lekc"><span data-filter3="lekc">Лекция</span></label></li>
+        <li><input class="list__item__vipad" type="checkbox" id="mara" name="forms"><label for="mara"><span data-filter3="mara">Марафон</span></label></li>
+        <li><input class="list__item__vipad" type="checkbox" id="fest" name="forms"><label for="fest"><span data-filter3="fest">Фестиваль</span></label></li>
+      </ul></li>
+      <li><a class="list__item" href="#" data-filter4="all">Напревленность</a>
+        <ul>
+          <li><input class="list__item__vipad" type="checkbox" id="gra" name="napravl"><label for="gra"><span data-filter4="gra">Патриотическое</span></label></li>
+          <li><input class="list__item__vipad" type="checkbox" id="coz" name="napravl"><label for="coz"><span data-filter4="coz">Социальное</span></label></li>
+          <li><input class="list__item__vipad" type="checkbox" id="obch" name="napravl"><label for="obch"><span data-filter4="obch">Общекльтурное</span></label></li>
+          <li><input class="list__item__vipad" type="checkbox" id="spor" name="napravl"><label for="spor"><span data-filter4="spor">Физическое</span></label></li>
+          <li><input class="list__item__vipad" type="checkbox" id="intel" name="napravl"><label for="intel"><span data-filter4="intel">Интеллектуальное </span></label></li>
+        </ul></li>
+        <li><a class="list__item" href="#" data-filter7="all">Формат</a>
+          <ul>
+            <li><input class="list__item__vipad" type="checkbox" id="ohn" name="format"><label for="ohn"><span data-filter7="ohn">Очно</span></label></li>
+            <li><input class="list__item__vipad" type="checkbox" id="dist" name="format"><label for="dist"><span data-filter7="dist">Дистанционно</span></label></li>
+          </ul></li>
+  </ul>
+  </div>
+  <div class="container2">
+    <div class="block__item resource" data-cat="resource" data-cat1="patriot" data-cat2="vse" data-cat3="conk" data-cat4="spor" data-cat7="dist">
+    <figure>
+      <figcaption>
+        <img src="img/rfhn4.png" alt="" class="mg1"><h2>ЦСКА-моя команда</h2>
+        <p>Участники на выбор <br>могут придумать  <br> и подготовить рисунки на одну из предложенных тем:
+<br>
+          — футболисты ПФК ЦСКА;
+          <br>
+          — болельщики ПФК ЦСКА;
+          <br>
+          — стадион ЦСКА. <br>
+          <b>Конкурс проводится: </b>
+
+          1-11-е классы; <br>
+          <b>Работы принимаются до 30 апреля</b></p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://patriotsport.moscow/cska-moja-komanda/" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+  </div>
+  <div class="block__item resource " data-cat="resource" data-cat1="patriot" data-cat2="vse" data-cat3="proekt" data-cat4="spor" data-cat7="ohn" >
+    <figure>
+      <figcaption>
+         <img src="img/карт3.png" alt="" class="mg4"><h2>Урок ЦСКА </h2>
+        <p>В рамках проекта для школьников предусмотрены следующие возможности:<br>
+          -мастер-классы <br>
+          -классные часы <br>
+          -классные часы <br>
+          -пригласительные билеты <br>
+        </p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://patriotsport.moscow/sport/urok-cska/" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+  </div>
+  <div class="block__item rating " data-cat="resource" data-cat1="rdch" data-cat2="vse" data-cat3="proekt" data-cat4="obch" data-cat7="ohn">
+    <figure>
+      <figcaption>
+        <img src="img/граж1.png" alt="" class="mg2"><h2>Всероссийский волонтёрский проект «Гражданская наука»</h2>
+        <p><b>3 апреля 2023 года</b><br>Российское движение детей и молодежи <br> В рамках проекта <b> учащиеся <br>1–11 классов и студенты СПО </b> <br>смогут принять участие в научно-исследовательских <br> работах российских ученых.</p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://рдш.рф/competition/3454#tasks" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+  </div>
+ 
+  
+
+
+
+  <div class="block__item lesson" data-cat="resource" data-cat1="subbot" data-cat2="sred" data-cat2="star" data-cat3="eksk" data-cat4="obch" data-cat7="ohn">
+    <figure>
+      <figcaption>
+        <img src="img/rfhn5.png" alt="" class="mg5"><h2>Музей хоккея</h2>
+        <p>Погрузитесь в захватывающую историю отечественного хоккея! Узнайте о зарождении хоккея в СССР, о <br>появлении первых вратарских масок и шлемов, о первых головокружительных победах нашей сборной!<br> <b>Дата проведения
+          20 Апреля 2023</b> <br>Обучающиеся 9-11 классов</p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://events.educom.ru/event/109496" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+    </div>
+    <div class="block__item forms " data-cat="resource" data-cat1="dom" data-cat2="vse" data-cat3="tren" data-cat4="spor" data-cat7="ohn">
+    <figure>
+      <figcaption>
+        <img src="img/rfhn 6.png" alt="" class="mg5"><h2 class="forms">Круговая тренировка</h2>
+        <p>На тренировке мы проработаем <br>все группы мышц и рассмотрим<br>элементы гибкости.
+
+          Ведущий - педагог ГБОУДО ДТДМ "Неоткрытые острова" Кыльчик Василий Васильевич.
+          
+        <br>Возраст участников: 7+.<br><b>Дата проведения
+          <br>16 Апреля 2023</b></p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://dom.educom.ru/event/110113" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+  </div>
+  <div class="block__item rating " data-cat="resource" data-cat1="znan" data-cat2="star" data-cat3="akc" data-cat4="obch" data-cat7="ohn">
+    <figure>
+      <figcaption>
+        <img src="img/rfhn7.png" alt="" class="mg5"><h2 class="rating">Знание.Герои
+          </h2>
+        <p>Как обычный человек становится настоящим Героем? Что вдохновляет <br>его на бескорыстные и смелые <br>поступки? Как самому стать <br>решительным и отважным? <br>Возраст участников: 10-11 классы<br><b>Дата проведения
+            <br>18.04 - 31.05</b></p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://znanierussia.ru/events/vserossijskaya-voenno-patrioticheskaya-prosvetitelskaya-akciya-z-2882" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+    </div>
+
+
+
+
+
+  <div class="block__item rating " data-cat="resource" data-cat1="subbot" data-cat2="sred" data-cat2="star" data-cat3="lekc" data-cat4="intel" data-cat7="dist">
+    <figure>
+      <figcaption>
+        <img src="img/карт8.png" alt="" class="mg5"><h2>Технологии достижения цели.</h2>
+        <p> На интерактивной лекции обучающиеся познакомятся с понятиями «цели», «целеполагание», «самостоятельность», «ответственность»
+          <br> <b>Дата проведения <br>29 Апреля 2023</b> <br>Обучающиеся 7-11 классов</p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://events.educom.ru/event/107792" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+</div>
+<div class="block__item resource " data-cat="resource" data-cat1="patriot" data-cat2="vse" data-cat3="proekt" data-cat4="spor" data-cat7="ohn">
+    <figure>
+      <figcaption>
+        <img src="img/rfhn9.png" alt="" class="mg6"><h2>Проект "Урок с чемпионом</h2>
+        <p>Уроки построены в формате мастер-классов и бесед,включающих рассказы спортсменов, ответы на вопросы, презентации фотографий и видео, <br>которые особенно интересны для детей.</p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://patriotsport.moscow/projects/proekt-urok-s-chempionom/" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+  </div>
+  <div class="block__item rating " data-cat="resource" data-cat1="rdch" data-cat2="vse" data-cat3="proekt" data-cat4="coz" data-cat7="dist">
+    <figure>
+      <figcaption>
+        <img src="img/rfhn10.png" alt="" class="mg5"><h2>Всероссийский проект <br>"На связи с природой" </h2>
+        <p><b>Прием заявок: с 3 апреля <br>по 15 июля 2023 года. </b><br>Создавай экологический отряд и <br>становись частью большого экологического сообщества <br>Российского движения детей и<br> молодежи «Движение первых».</p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://рдш.рф/competition/3455" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+  </div>
+
+
+
+
+
+    <div class="block__item lesson " data-cat="resource" data-cat1="subbot" data-cat2="sred" data-cat2="star" data-cat3="eksk" data-cat4="obch" data-cat7="ohn">
+    <figure>
+      <figcaption>
+        <img src="img/rfhn11.png" alt="" class="mg7"><h2>Государственный музей спорта</h2>
+        <p>Государственный музей спорта <br>приглашает школьников и студентов на встречу с Юрием Постригаем
+        <br><b>Дата проведения <br>26 Апреля 2023</b> <br> Обучающиеся 9-11 классов </p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://events.educom.ru/event/110066" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+  </div>
+  <div class="block__item forms" data-cat="resource"data-cat1="dom" data-cat2="vse" data-cat3="victor" data-cat4="obch" data-cat7="dist">
+    <figure>
+      <figcaption>
+        <img src="img/rfhn12.png" alt="" class="mg5"><h2>РАЗГОВОРЫ О ВАЖНОМ. <br>День космонавтики.</h2>
+        <p>Участники программы познакомятся с историей развития космонавтики, <br>узнают о том, как на околоземную <br>орбиту был выведен первый в мире искусственный спутник Земли
+          <br><b>Дата проведения <br>15 Апреля 2023</b> <br> Обучающиеся 1-11 классов </p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://dom.educom.ru/event/109045" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+  </div>
+  <div class="block__item rating " data-cat="resource" data-cat1="znan" data-cat2="vse" data-cat3="mara" data-cat4="obch" data-cat7="dist">
+    <figure>
+      <figcaption>
+        <img src="img/rfhn13.png" alt="" class="mg5"><h2>Марафон «День Победы»</h2>
+        <p>Марафон, посвященный Великому <br>подвигу нашего народа в борьбе <br>против фашизма. Лекции на тему воспоминаний о событиях Великой Отечественной Войны. Спикеры - представители вооруженных сил РФ, ветераны ВОВ, историки, деятели<br> культуры и искусства. </p>
+      </figcaption>
+    </figure>
+    <div class="cont">
+      <a class="button" href="https://znanierussia.ru/events/marafon-den-pobedy-1338" target="_blank">
+        <div class="span button__line button__line--top"></div>
+        <div class="span button__line button__line--right"></div>
+        <div class="span button__line button__line--bottom"></div>
+        <div class="span button__line button__line--left"></div>
+        Регистрация</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container6">
+<div class="block__item forms" data-cat="resource" data-cat1="dom" data-cat2="vse" data-cat3="master" data-cat4="spor" data-cat7="dist">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn14.png" alt="" class="mg5"><h2>Танцевальные тренды <br>Тик-Тока</h2>
+      <p> В социальной сети можно не только посмотреть, насколько отлично<br> танцуют пользователи, но и <br>поучаствовать в мастер-классе.
+
+        <br><b>Дата проведения <br>22 Апреля 2023</b> <br>Возраст участников 8+.</p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://dom.educom.ru/event/109283" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+<div class="block__item rating " data-cat="resource" data-cat1="znan" data-cat2="vse" data-cat3="mara" data-cat4="obch" data-cat7="dist">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn15.png" alt="" class="mg8"><h2>Космический марафон
+        «Ключ на старт». Москва</h2>
+      <p>В рамках празднования Дня <br>космонавтики Российское общество «Знание» проводит просветительский марафон на темы, связанные с планами освоения космического пространства.</p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://znanierussia.ru/events/kosmicheskij-marafon-klyuch-na-start-3783" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+<div class="block__item rating " data-cat="resource" data-cat1="rdch" data-cat2="vse" data-cat3="proekt" data-cat4="intel" data-cat7="dist">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn16.png" alt="" class="mg5"><h2>Всероссийский проект "МедиаПритяжение"</h2>
+      <p>Всероссийский проект «МедиаПритяжение» – это уникальный проект для юных журналистов, <br>блогеров, видеомейкеров, дизайнеров <br>и медиацентров <br> общеобразовательных организаций. <br> <b> С 5 марта по 20 апреля <br> 2023 года – подача заявок</b> </p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://рдш.рф/competition/3434" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+
+
+
+
+
+<div class="block__item forms" data-cat="resource" data-cat1="dom" data-cat2="nachal sred star" data-cat3="sorev" data-cat4="spor" data-cat7="dist">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn17.png" alt="" class="mg5"><h2>Первый отборочный этап на "Кубок Победы" по шахматам</h2>
+      <p>Приглашаем всех желающих <b>в возрасте <br>от 7 до 18 лет</b> принять участие в<br> турнире по быстрым шахматам. Турнир пройдет в формате онлайн на <br>платформе Lichess по правилам Арены.</p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://dom.educom.ru/event/110527" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+<div class="block__item rating " data-cat="resource" data-cat1="rdch" data-cat2="nachal sred star" data-cat3="conk" data-cat4="coz">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn18.png" alt="" class="mg5"><h2>Открытый конкурс рисунков школьников «Портрет <br> Эрмитажного кота» </h2>
+      <p>Развитие и поддержка творческого потенциала<b> <br> Период с 22 марта <br> по 28 мая 2023 года</b></p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://рдш.рф/competition/3438" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+<div class="block__item resource " data-cat="resource" data-cat1="patriot" data-cat2="nachal sred star" data-cat3="fest" data-cat4="spor" data-cat7="ohn">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn19.png" alt="" class="mg5"><h2>ГТО</h2>
+      <p>Всероссийский физкультурно-<br>спортивный комплекс «Готов к труду и обороне» (ГТО) — это нормативная <br>основа физического воспитания<br> населения страны, нацеленная <br>на развитие массового спорта.</p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://gto.patriotsport.moscow/" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+
+
+
+
+<div class="block__item rating " data-cat="resource" data-cat1="rdch" data-cat2="sred star" data-cat3="fest" data-cat4="intel" data-cat7="ohn">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn20.png" alt="" class="mg5"><h2>Всероссийский фестиваль «Российская школьная весна»</h2>
+      <p> <b> С 13 марта по 5 июня 2023 года</b> пройдет первый в России <br> масштабный фестиваль непрофессионального <br> ученического творчества <br> «Российская школьная весна». </p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://рдш.рф/competition/3440"target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+<div class="block__item rating " data-cat="resource" data-cat1="rdch" data-cat2="nachal sred star" data-cat3="conk" data-cat4="intel" data-cat7="dist">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn21.png" alt="" class="mg5"><h2>Конкурсный отбор на участие в программе «Время первых»</h2>
+      <p> К участию в Конкурсе приглашаются <br>обучающиеся общеобразовательных <br>организаций в возрасте с 11 до 17 лет <br> <b>Крайний срок подачи <br> заявки: до 23 апреля 2023 года (включительно).</b></p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://рдш.рф/competition/3449" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+<div class="block__item rating " data-cat="resource" data-cat1="rdch" data-cat2="nachal sred star" data-cat3="akc" data-cat4="coz" data-cat7="dist">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn23.png" alt="" class="mg5"><h2>Всероссийская акция «Заповедный след»</h2>
+      <p> Выбирай животное из Красной <br>книги России, создавай заповедный паспорт и выбирай символ направления «Экология и охрана природы» РДДМ «Движение <br>первых» вместе с нами! 
+
+       <br> <b>Прием заявок: с 3 апреля <br>по 17 апреля 2023 года.</b></p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://рдш.рф/competition/3458" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+
+
+
+
+
+<div class="block__item resource " data-cat="resource" data-cat1="patriot" data-cat2="nachal sred star" data-cat3="master" data-cat4="spor" data-cat7="ohn">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn24.png" alt="" class="mg5"><h2>Патриот.спорт<br> Мастер-классы</h2>
+      <p>Виды спорта:<br>
+
+        -Хоккей, <br>
+        -Лапта,<br>
+        -Плавание, <br>
+        -Прыжки через резинку.<br>
+        Участие в проекте может принять любая образовательная организация</p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://patriotsport.moscow/master-klassy/" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+<div class="block__item lesson " data-cat="resource" data-cat1="subbot" data-cat2="sred star" data-cat3="lekc" data-cat4="intel" data-cat7="dist">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn25.png" alt="" class="mg5"><h2>Определение типа «Я-слушания».</h2>
+      <p>У любого человека всегда <br>присутствуют две потребности, возникающие, когда обеспечены <br>его базовые потребности: быть <br>услышанным другими и<br> услышать себя. <br>
+      <b>Дата проведения 22 Апреля 2023</b> <br> Обучающиеся 6-11 классов </p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://events.educom.ru/event/107781" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+<div class="block__item lesson " data-cat="resource" data-cat1="subbot" data-cat2="sred star" data-cat3="lekc" data-cat4="intel" data-cat7="dist">
+  <figure>
+    <figcaption>
+      <img src="img/rfhn26.png" alt="" class="mg5"><h2>Стресс-менеджмент и закономерности <br>стресса по Г. Селье</h2>
+      <p>Есть ли у Вас стресс, вреден он или полезен и как научиться им управлять?
+      <br><b>Дата проведения <br>22 Апреля 2023</b> <br> Обучающиеся 6-11 классов </p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://events.educom.ru/event/107699" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="block__item lesson " data-cat1="#" data-cat2="vse" data-cat3="#" data-cat4="gra" data-cat6="olimp" data-cat7="dist">
+  <figure>
+    <figcaption>
+      <img src="img/Без заголовка.png" alt="" class="mg5"><h2>Не прервется связь поколений</h2>
+      <p>Это проект, целью которого является вовлечение учащихся в изучение <br>событий Великой Отечественной войны <br>Обучающиеся 5-11 классов <br>Регистрация с 18 октября 2022 <br>по 17 января</p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://pokolenie.mosmetod.ru/" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+<div class="block__item lesson " data-cat1="#" data-cat2="vse" data-cat4="obch" data-cat3="#" data-cat6="olimp" data-cat7="dist">
+  <figure>
+    <figcaption>
+      <img src="img/храм.png" alt="" class="mg5"><h2>Олимпиада «История и культура храмов столицы и городов России»</h2>
+      <p>Ежегодная открытая исследовательская культурологическая олимпиада
+      <br><b>Регистрация до 26 января 2023</b> <br> Обучающиеся 1-11 классов </p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://konkurs.mosmetod.ru/index.php?el=2&id=4799" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+<div class="block__item lesson " data-cat1="#" data-cat2="vse" data-cat4="obch" data-cat3="#" data-cat6="olimp" data-cat7="dist">
+  <figure>
+    <figcaption>
+      <img src="img/усадьбы .png" alt="" class="mg5"><h2>Олимпиада «Музеи. Парки. Усадьбы»</h2>
+      <p> это лучший способ посетить самые интересные места Москвы и узнать <br>много нового! 
+      <br><b>Дата проведения 16 сентября 2022 года-31 марта 2023 года</b> <br> Обучающиеся 1-11 классов </p>
+    </figcaption>
+  </figure>
+  <div class="cont">
+    <a class="button" href="https://museum.olimpiada.ru/information" target="_blank">
+      <div class="span button__line button__line--top"></div>
+      <div class="span button__line button__line--right"></div>
+      <div class="span button__line button__line--bottom"></div>
+      <div class="span button__line button__line--left"></div>
+      Регистрация</a>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
